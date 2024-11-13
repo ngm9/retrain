@@ -3,7 +3,6 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Question, Feedback } from "../types/types";
-import { HandThumbUpIcon, HandThumbDownIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 interface QuestionViewerProps {
   question: Question;
@@ -80,13 +79,13 @@ export default function QuestionViewer({
             onClick={handleApprove}
             className={`flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded w-full sm:w-auto ${isApproved === true ? "opacity-70" : ""}`}
           >
-            <HandThumbUpIcon className="h-5 w-5 mr-2" /> Approve
+            Approve
           </button>
           <button
             onClick={handleDisapprove}
             className={`flex items-center justify-center bg-red-500 text-white px-4 py-2 rounded w-full sm:w-auto ${isApproved === false ? "opacity-70" : ""}`}
           >
-            <HandThumbDownIcon className="h-5 w-5 mr-2" /> Disapprove
+            Disapprove
           </button>
         </div>
 
@@ -120,14 +119,14 @@ export default function QuestionViewer({
             disabled={isFirst}
             className={`flex items-center text-gray-600 hover:text-blue-500 ${isFirst ? "opacity-50 cursor-not-allowed" : ""}`}
           >
-            <ChevronLeftIcon className="h-5 w-5 mr-1" /> Previous
+            Previous
           </button>
           <button
             onClick={handleNext}
             disabled={isLast}
             className={`flex items-center text-gray-600 hover:text-blue-500 ${isLast ? "opacity-50 cursor-not-allowed" : ""}`}
           >
-            Next <ChevronRightIcon className="h-5 w-5 ml-1" />
+            Next
           </button>
         </div>
       </div>
