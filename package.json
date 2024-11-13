@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "npx -p node@18.20.1 next dev -p 5000",
-    "build": "next build",
+    "build": "npx -p node@18.20.1 next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.5",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
